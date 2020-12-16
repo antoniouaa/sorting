@@ -23,9 +23,8 @@ const bubbleSort = (arr) => {
   }
 };
 
-export default function Algo() {
+export default function BubbleSort() {
   let array = [...Array(100).keys()];
-  let states = [];
 
   const setup = (p5, canvasParentRef) => {
     p5.frameRate(22);
@@ -44,12 +43,15 @@ export default function Algo() {
     });
   };
 
+  const resetSketch = (e) => {
+    fisherYatesShuffle(array);
+  };
+
   return (
     <div>
       <span>Algo</span>
-      {console.log(states)}
-      <p>{states.length}</p>
       <Sketch setup={setup} draw={draw} />
+      <button onClick={(e) => resetSketch(e)}>Reset</button>
     </div>
   );
 }
