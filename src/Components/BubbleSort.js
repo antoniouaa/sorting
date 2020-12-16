@@ -49,7 +49,7 @@ export default function BubbleSort() {
 
   return (
     <div>
-      <span>Algo</span>
+      <h3>Bubble Sort</h3>
       <Sketch setup={setup} draw={draw} />
       <button onClick={(e) => resetSketch(e)}>Reset</button>
     </div>
